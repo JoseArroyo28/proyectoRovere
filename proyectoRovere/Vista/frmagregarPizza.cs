@@ -18,6 +18,7 @@ namespace proyectoRovere.Vista
         {
             InitializeComponent();
         }
+
         public frmagregarPizza(Vista.frmmenuPizzas pizzas, Modelo.pizzaModelo pizzaModelo, string _id)
         {
             this.id = _id;
@@ -27,7 +28,7 @@ namespace proyectoRovere.Vista
             txtEspecialidad.Text = pizzaModelo.Especialidad;
             txtCaracteristica.Text = pizzaModelo.caracteristica;
         }
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             if (btnAgregar.Text == "Modificar")
             {
@@ -35,7 +36,7 @@ namespace proyectoRovere.Vista
                 {
                     MessageBox.Show("Se Ha Modificado la Pizza ");
                 }
-               
+
             }
             else
             {
@@ -44,23 +45,15 @@ namespace proyectoRovere.Vista
                     MessageBox.Show("Se Ha Agregado nuevo Menu ");
                 }
             }
-           
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            frmMenu frmMenu = new frmMenu();
-            frmMenu.Show();
-
-            this.Close();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             if (pizzasControlador.eliminarPizza(Convert.ToInt32(id)))
             {
                 MessageBox.Show("Se Ha Eliminado  Pizza ");
             }
+
         }
     }
 }
