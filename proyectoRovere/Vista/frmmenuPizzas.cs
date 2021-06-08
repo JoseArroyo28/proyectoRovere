@@ -24,21 +24,23 @@ namespace proyectoRovere.Vista
             pizzas.verPizzas();
         }
 
-        private void dgvverPizzas_MouseDoubleClick(object sender, MouseEventArgs e)
+
+    
+        private void dgvverPizzas_MouseDoubleClick_1(object sender, MouseEventArgs e)
         {
             Modelo.pizzaModelo pizzaM = new Modelo.pizzaModelo();
 
             pizzaM.idPizza = int.Parse(dgvverPizzas.CurrentRow.Cells[0].Value.ToString());
-           pizzaM.Especialidad = dgvverPizzas.CurrentRow.Cells[1].Value.ToString();
+            pizzaM.Especialidad = dgvverPizzas.CurrentRow.Cells[1].Value.ToString();
             pizzaM.caracteristica = dgvverPizzas.CurrentRow.Cells[2].Value.ToString();
-           
+
             this.Hide();
-            Vista.frmagregarPizza frmagregarPizza = new Vista.frmagregarPizza( this,pizzaM, pizzaM.idPizza.ToString());
+            Vista.frmagregarPizza frmagregarPizza = new Vista.frmagregarPizza(this, pizzaM, pizzaM.idPizza.ToString());
             frmagregarPizza.Show();
             this.Hide();
         }
 
-        private void dgvverPizzas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
 
         }
