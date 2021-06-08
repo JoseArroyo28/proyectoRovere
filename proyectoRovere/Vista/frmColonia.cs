@@ -71,5 +71,53 @@ namespace proyectoRovere.Vista
             btnModificar.Text = "Agregar";
             btnEliminar.Enabled = false;
         }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            if (btnModificar.Text == "Modificar")
+            {
+                if (coloniaControlador.modificarColonia(txtColonia.Text, Id))
+                {
+                    MessageBox.Show("Colonia Modificada Correctamente!");
+                    dgvColonia.DataSource = coloniaControlador.verColonias();
+                }
+            }
+            else
+            {
+                if (coloniaControlador.insertarColonia(txtColonia.Text))
+                {
+                    MessageBox.Show("Colonia Guardada Correctamente!");
+                    dgvColonia.DataSource = coloniaControlador.verColonias();
+                }
+            }
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            frmMenu frmMenu = new frmMenu();
+            frmMenu.Show();
+        }
+
+        private void frmColonia_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            if (coloniaControlador.eliminarColonia(Id))
+            {
+                MessageBox.Show("Colonia Eliminada!");
+                dgvColonia.DataSource = coloniaControlador.verColonias();
+            }
+        }
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
+            txtColonia.Clear();
+            btnModificar.Text = "Agregar";
+            btnEliminar.Enabled = false;
+        }
     }
 }
