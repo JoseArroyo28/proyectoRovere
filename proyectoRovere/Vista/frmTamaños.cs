@@ -26,6 +26,7 @@ namespace proyectoRovere.Vista
             if (tamañocontrolador.modificarTamaño(txtTamaño.Text, txtPrecio.Text,id))
             {
                 MessageBox.Show("Datos Modificados Correctamente");
+                dgvTamaños.DataSource = tamañocontrolador.verTamaños();
             }
         }
 

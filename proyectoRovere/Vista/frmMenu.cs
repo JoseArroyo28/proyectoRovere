@@ -39,7 +39,7 @@ namespace proyectoRovere.Vista
         {
             AbrirFormulario<frmagregarPizza>();
         }
-        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        public void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
             formulario = panelFormularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
@@ -113,6 +113,41 @@ namespace proyectoRovere.Vista
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDesplegar_Click(object sender, EventArgs e)
+        {
+            esconderMenu();
+        }
+
+        private void esconderMenu()
+        {
+            if (panelContenedor.Width == 150)
+            {
+                btnAgregar.Text = "";
+                btnMenu.Text = "";
+                btnVer.Text = "";
+                btnPedido.Text = "";
+                btnColonias.Text = "";
+                btnPrecios.Text = "";
+                btnCosto.Text = "";
+                btnTamaño.Text = "";
+                btnUsuario.Text = "";
+                panelContenedor.Width = 50;
+            }
+            else
+            {
+                btnAgregar.Text = "Agregar";
+                btnMenu.Text = "Menu";
+                btnVer.Text = "Ver";
+                btnPedido.Text = "Pedido";
+                btnColonias.Text = "Colonias";
+                btnPrecios.Text = "Precios";
+                btnCosto.Text = "Costo extra";
+                btnTamaño.Text = "Tamaño";
+                btnUsuario.Text = "Usuario";
+                panelContenedor.Width = 150;
+            }
         }
     }
 }

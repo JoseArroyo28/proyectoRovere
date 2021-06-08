@@ -49,6 +49,7 @@
     <Compile Include="Controlador\coloniaControlador.cs" />
     <Compile Include="Controlador\pizzasControlador.cs" />
     <Compile Include="Controlador\tamañocontrolador.cs" />
+    <Compile Include="Controlador\usuarioControlador.cs" />
     <Compile Include="Modelo\conexionBD.cs" />
     <Compile Include="Modelo\databasecon.cs" />
     <Compile Include="Modelo\pizzaModelo.cs" />

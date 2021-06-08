@@ -65,7 +65,7 @@
             this.panelBarra.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelBarra.Location = new System.Drawing.Point(200, 0);
             this.panelBarra.Name = "panelBarra";
-            this.panelBarra.Size = new System.Drawing.Size(749, 44);
+            this.panelBarra.Size = new System.Drawing.Size(948, 44);
             this.panelBarra.TabIndex = 4;
             // 
             // btnCerrar
@@ -75,7 +75,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(713, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(912, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(36, 44);
             this.btnCerrar.TabIndex = 4;
@@ -329,6 +329,7 @@
             this.btnDesplegar.Size = new System.Drawing.Size(50, 44);
             this.btnDesplegar.TabIndex = 3;
             this.btnDesplegar.UseVisualStyleBackColor = true;
+            this.btnDesplegar.Click += new System.EventHandler(this.btnDesplegar_Click);
             // 
             // panelFormularios
             // 
@@ -336,19 +337,20 @@
             this.panelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormularios.Location = new System.Drawing.Point(200, 44);
             this.panelFormularios.Name = "panelFormularios";
-            this.panelFormularios.Size = new System.Drawing.Size(749, 508);
+            this.panelFormularios.Size = new System.Drawing.Size(948, 508);
             this.panelFormularios.TabIndex = 5;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 552);
+            this.ClientSize = new System.Drawing.Size(1148, 552);
             this.Controls.Add(this.panelFormularios);
             this.Controls.Add(this.panelBarra);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";
             this.panelBarra.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);

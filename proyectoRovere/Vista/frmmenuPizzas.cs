@@ -20,8 +20,7 @@ namespace proyectoRovere.Vista
 
         private void frmmenuPizzas_Load(object sender, EventArgs e)
         {
-            dgvverPizzas.DataSource=
-            pizzas.verPizzas();
+            dgvverPizzas.DataSource =pizzas.verPizzas();
         }
 
 
@@ -43,6 +42,44 @@ namespace proyectoRovere.Vista
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
-        }
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        +
+                }
     }
 }
