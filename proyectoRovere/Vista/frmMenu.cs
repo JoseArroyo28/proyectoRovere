@@ -92,7 +92,7 @@ namespace proyectoRovere.Vista
 
         private void btnTamaño_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario<frmTamaños>();
         }
 
         private void btnColonias_Click(object sender, EventArgs e)
