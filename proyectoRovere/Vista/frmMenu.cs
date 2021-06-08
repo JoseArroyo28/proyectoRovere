@@ -17,32 +17,102 @@ namespace proyectoRovere.Vista
             InitializeComponent();
         }
         
-        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+      
+
+        private void btnMenu_Click(object sender, EventArgs e)
         {
-            Vista.frmmenuPizzas frmmenuPizzas = new frmmenuPizzas();
-            frmmenuPizzas.Show();
-            this.Hide();
+            subMenuPizza();
+        }
+        private void subMenuPizza()
+        {
+            if (panelSubMenu.Visible == false)
+            {
+                panelSubMenu.Visible = true;
+            }
+            else
+            {
+                panelSubMenu.Visible = false;
+
+            }
+        }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmagregarPizza>();
+        }
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = panelFormularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
+                                                                                     //si el formulario/instancia no existe
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                panelFormularios.Controls.Add(formulario);
+                panelFormularios.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            //si el formulario/instancia existe
+            else
+            {
+                formulario.BringToFront();
+            }
         }
 
-        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnVer_Click(object sender, EventArgs e)
         {
-            Vista.frmagregarPizza frmagregarPizza = new frmagregarPizza();
-            frmagregarPizza.Show();
-            this.Hide();
+            AbrirFormulario<frmmenuPizzas>();
         }
 
-        private void preciosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnPrecios_Click(object sender, EventArgs e)
         {
-            Vista.frmTamaños tamaños  = new frmTamaños();
-            tamaños.Show();
-            this.Hide();
+            subMenuPrecios();
+        }
+        private void subMenuPrecios()
+        {
+
+            if (panelPrecios.Visible == false)
+            {
+                panelPrecios.Visible = true;
+            }
+            else
+            {
+                panelPrecios.Visible = false;
+
+            }
         }
 
-        private void coloniasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCosto_Click(object sender, EventArgs e)
         {
-            frmColonia frmColonia = new frmColonia();
-            frmColonia.Show();
-            this.Hide();
+
+        }
+
+        private void btnTamaño_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnColonias_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmColonia>();
+        }
+
+        private void btnPedido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
