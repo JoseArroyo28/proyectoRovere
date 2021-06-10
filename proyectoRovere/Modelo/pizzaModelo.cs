@@ -14,6 +14,7 @@ namespace proyectoRovere.Modelo
         public bool estado { get; set; }
         public  byte[] imagenpro { get; set; }
         public string caracteristica { get; set; }
+        public int asd { get; set; }
 
         public pizzaModelo() { }
         public pizzaModelo(int idPizza,string Especialidad,int idTamaño,bool estado, byte[] imagenpro ,string caracteristica) {
