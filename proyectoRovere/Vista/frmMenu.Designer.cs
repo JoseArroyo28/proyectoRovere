@@ -29,360 +29,225 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
-            this.panelBarra = new System.Windows.Forms.Panel();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panelMedios = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUsuario = new System.Windows.Forms.Button();
-            this.btnPedido = new System.Windows.Forms.Button();
-            this.btnColonias = new System.Windows.Forms.Button();
-            this.panelPrecios = new System.Windows.Forms.Panel();
-            this.btnTamaño = new System.Windows.Forms.Button();
-            this.btnCosto = new System.Windows.Forms.Button();
-            this.btnPrecios = new System.Windows.Forms.Button();
-            this.panelSubMenu = new System.Windows.Forms.Panel();
-            this.btnVer = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnDesplegar = new System.Windows.Forms.Button();
-            this.panelFormularios = new System.Windows.Forms.Panel();
-            this.panelBarra.SuspendLayout();
-            this.panelContenedor.SuspendLayout();
-            this.panelMedios.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panelPrecios.SuspendLayout();
-            this.panelSubMenu.SuspendLayout();
-            this.panelLogo.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coloniasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pizzasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.costosExtrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.verToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelBarra
+            // menuStrip1
             // 
-            this.panelBarra.BackColor = System.Drawing.Color.White;
-            this.panelBarra.Controls.Add(this.btnCerrar);
-            this.panelBarra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBarra.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelBarra.Location = new System.Drawing.Point(200, 0);
-            this.panelBarra.Name = "panelBarra";
-            this.panelBarra.Size = new System.Drawing.Size(948, 44);
-            this.panelBarra.TabIndex = 4;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(140)))));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pedidoToolStripMenuItem,
+            this.menuToolStripMenuItem,
+            this.coloniasToolStripMenuItem,
+            this.preciosToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btnCerrar
+            // pedidoToolStripMenuItem
             // 
-            this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(912, 0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(36, 44);
-            this.btnCerrar.TabIndex = 4;
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
+            this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.pedidoToolStripMenuItem.Text = "Pedido";
+            this.pedidoToolStripMenuItem.Click += new System.EventHandler(this.pedidoToolStripMenuItem_Click);
             // 
-            // panelContenedor
+            // menuToolStripMenuItem
             // 
-            this.panelContenedor.AutoScroll = true;
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(121)))), ((int)(((byte)(168)))));
-            this.panelContenedor.Controls.Add(this.panelMedios);
-            this.panelContenedor.Controls.Add(this.panelSubMenu);
-            this.panelContenedor.Controls.Add(this.btnMenu);
-            this.panelContenedor.Controls.Add(this.panelLogo);
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelContenedor.Location = new System.Drawing.Point(0, 0);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(200, 552);
-            this.panelContenedor.TabIndex = 3;
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verToolStripMenuItem,
+            this.agregarToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.menuToolStripMenuItem.Text = "Menu";
             // 
-            // panelMedios
+            // verToolStripMenuItem
             // 
-            this.panelMedios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(121)))), ((int)(((byte)(168)))));
-            this.panelMedios.Controls.Add(this.panel1);
-            this.panelMedios.Controls.Add(this.panelPrecios);
-            this.panelMedios.Controls.Add(this.btnPrecios);
-            this.panelMedios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMedios.Location = new System.Drawing.Point(0, 206);
-            this.panelMedios.Name = "panelMedios";
-            this.panelMedios.Size = new System.Drawing.Size(200, 307);
-            this.panelMedios.TabIndex = 4;
+            this.verToolStripMenuItem.Name = "verToolStripMenuItem";
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
+            this.verToolStripMenuItem.Text = "Ver";
+            this.verToolStripMenuItem.Click += new System.EventHandler(this.verToolStripMenuItem_Click);
             // 
-            // panel1
+            // agregarToolStripMenuItem
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(121)))), ((int)(((byte)(168)))));
-            this.panel1.Controls.Add(this.btnUsuario);
-            this.panel1.Controls.Add(this.btnPedido);
-            this.panel1.Controls.Add(this.btnColonias);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 152);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 146);
-            this.panel1.TabIndex = 5;
+            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
+            this.agregarToolStripMenuItem.Text = "Agregar";
+            this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
-            // btnUsuario
+            // coloniasToolStripMenuItem
             // 
-            this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(121)))), ((int)(((byte)(168)))));
-            this.btnUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsuario.FlatAppearance.BorderSize = 0;
-            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.Image")));
-            this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuario.Location = new System.Drawing.Point(0, 90);
-            this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(200, 45);
-            this.btnUsuario.TabIndex = 4;
-            this.btnUsuario.Text = "Usuarios";
-            this.btnUsuario.UseVisualStyleBackColor = false;
-            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+            this.coloniasToolStripMenuItem.Name = "coloniasToolStripMenuItem";
+            this.coloniasToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.coloniasToolStripMenuItem.Text = "Colonias";
+            this.coloniasToolStripMenuItem.Click += new System.EventHandler(this.coloniasToolStripMenuItem_Click);
             // 
-            // btnPedido
+            // preciosToolStripMenuItem
             // 
-            this.btnPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(121)))), ((int)(((byte)(168)))));
-            this.btnPedido.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPedido.FlatAppearance.BorderSize = 0;
-            this.btnPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedido.ForeColor = System.Drawing.Color.White;
-            this.btnPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnPedido.Image")));
-            this.btnPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedido.Location = new System.Drawing.Point(0, 45);
-            this.btnPedido.Name = "btnPedido";
-            this.btnPedido.Size = new System.Drawing.Size(200, 45);
-            this.btnPedido.TabIndex = 0;
-            this.btnPedido.Text = "Pedido";
-            this.btnPedido.UseVisualStyleBackColor = false;
-            this.btnPedido.Click += new System.EventHandler(this.btnPedido_Click);
+            this.preciosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pizzasToolStripMenuItem,
+            this.costosExtrasToolStripMenuItem});
+            this.preciosToolStripMenuItem.Name = "preciosToolStripMenuItem";
+            this.preciosToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.preciosToolStripMenuItem.Text = "Precios";
+            this.preciosToolStripMenuItem.Click += new System.EventHandler(this.preciosToolStripMenuItem_Click);
             // 
-            // btnColonias
+            // pizzasToolStripMenuItem
             // 
-            this.btnColonias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(121)))), ((int)(((byte)(168)))));
-            this.btnColonias.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnColonias.FlatAppearance.BorderSize = 0;
-            this.btnColonias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnColonias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnColonias.ForeColor = System.Drawing.Color.White;
-            this.btnColonias.Image = ((System.Drawing.Image)(resources.GetObject("btnColonias.Image")));
-            this.btnColonias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnColonias.Location = new System.Drawing.Point(0, 0);
-            this.btnColonias.Name = "btnColonias";
-            this.btnColonias.Size = new System.Drawing.Size(200, 45);
-            this.btnColonias.TabIndex = 1;
-            this.btnColonias.Text = "Colonias ";
-            this.btnColonias.UseVisualStyleBackColor = false;
-            this.btnColonias.Click += new System.EventHandler(this.btnColonias_Click);
+            this.pizzasToolStripMenuItem.Name = "pizzasToolStripMenuItem";
+            this.pizzasToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.pizzasToolStripMenuItem.Text = "Pizzas";
+            this.pizzasToolStripMenuItem.Click += new System.EventHandler(this.pizzasToolStripMenuItem_Click);
             // 
-            // panelPrecios
+            // costosExtrasToolStripMenuItem
             // 
-            this.panelPrecios.BackColor = System.Drawing.Color.White;
-            this.panelPrecios.Controls.Add(this.btnTamaño);
-            this.panelPrecios.Controls.Add(this.btnCosto);
-            this.panelPrecios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPrecios.Location = new System.Drawing.Point(0, 45);
-            this.panelPrecios.Name = "panelPrecios";
-            this.panelPrecios.Size = new System.Drawing.Size(200, 107);
-            this.panelPrecios.TabIndex = 4;
-            this.panelPrecios.Visible = false;
+            this.costosExtrasToolStripMenuItem.Name = "costosExtrasToolStripMenuItem";
+            this.costosExtrasToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.costosExtrasToolStripMenuItem.Text = "Costos Extras";
+            this.costosExtrasToolStripMenuItem.Click += new System.EventHandler(this.costosExtrasToolStripMenuItem_Click);
             // 
-            // btnTamaño
+            // usuariosToolStripMenuItem
             // 
-            this.btnTamaño.BackColor = System.Drawing.Color.White;
-            this.btnTamaño.FlatAppearance.BorderSize = 0;
-            this.btnTamaño.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTamaño.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTamaño.Image = ((System.Drawing.Image)(resources.GetObject("btnTamaño.Image")));
-            this.btnTamaño.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTamaño.Location = new System.Drawing.Point(0, 51);
-            this.btnTamaño.Name = "btnTamaño";
-            this.btnTamaño.Size = new System.Drawing.Size(200, 45);
-            this.btnTamaño.TabIndex = 5;
-            this.btnTamaño.Text = "Tamaño";
-            this.btnTamaño.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTamaño.UseVisualStyleBackColor = false;
-            this.btnTamaño.Click += new System.EventHandler(this.btnTamaño_Click);
+            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarToolStripMenuItem1,
+            this.verToolStripMenuItem1});
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
-            // btnCosto
+            // agregarToolStripMenuItem1
             // 
-            this.btnCosto.BackColor = System.Drawing.Color.White;
-            this.btnCosto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCosto.FlatAppearance.BorderSize = 0;
-            this.btnCosto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCosto.ForeColor = System.Drawing.Color.Black;
-            this.btnCosto.Image = ((System.Drawing.Image)(resources.GetObject("btnCosto.Image")));
-            this.btnCosto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCosto.Location = new System.Drawing.Point(0, 0);
-            this.btnCosto.Name = "btnCosto";
-            this.btnCosto.Size = new System.Drawing.Size(200, 45);
-            this.btnCosto.TabIndex = 5;
-            this.btnCosto.Text = "Costo extra";
-            this.btnCosto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCosto.UseVisualStyleBackColor = false;
-            this.btnCosto.Click += new System.EventHandler(this.btnCosto_Click);
+            this.agregarToolStripMenuItem1.Name = "agregarToolStripMenuItem1";
+            this.agregarToolStripMenuItem1.Size = new System.Drawing.Size(138, 26);
+            this.agregarToolStripMenuItem1.Text = "Agregar";
+            this.agregarToolStripMenuItem1.Click += new System.EventHandler(this.agregarToolStripMenuItem1_Click);
             // 
-            // btnPrecios
+            // verToolStripMenuItem1
             // 
-            this.btnPrecios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(121)))), ((int)(((byte)(168)))));
-            this.btnPrecios.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnPrecios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPrecios.FlatAppearance.BorderSize = 0;
-            this.btnPrecios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrecios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrecios.ForeColor = System.Drawing.Color.White;
-            this.btnPrecios.Image = ((System.Drawing.Image)(resources.GetObject("btnPrecios.Image")));
-            this.btnPrecios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrecios.Location = new System.Drawing.Point(0, 0);
-            this.btnPrecios.Name = "btnPrecios";
-            this.btnPrecios.Size = new System.Drawing.Size(200, 45);
-            this.btnPrecios.TabIndex = 3;
-            this.btnPrecios.Text = "Precios";
-            this.btnPrecios.UseVisualStyleBackColor = false;
-            this.btnPrecios.Click += new System.EventHandler(this.btnPrecios_Click);
+            this.verToolStripMenuItem1.Name = "verToolStripMenuItem1";
+            this.verToolStripMenuItem1.Size = new System.Drawing.Size(138, 26);
+            this.verToolStripMenuItem1.Text = "Ver";
+            this.verToolStripMenuItem1.Click += new System.EventHandler(this.verToolStripMenuItem1_Click);
             // 
-            // panelSubMenu
+            // pictureBox2
             // 
-            this.panelSubMenu.Controls.Add(this.btnVer);
-            this.panelSubMenu.Controls.Add(this.btnAgregar);
-            this.panelSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenu.Location = new System.Drawing.Point(0, 118);
-            this.panelSubMenu.Name = "panelSubMenu";
-            this.panelSubMenu.Size = new System.Drawing.Size(200, 88);
-            this.panelSubMenu.TabIndex = 1;
-            this.panelSubMenu.Visible = false;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(6, 89);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(171, 176);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
-            // btnVer
+            // label3
             // 
-            this.btnVer.BackColor = System.Drawing.Color.White;
-            this.btnVer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVer.FlatAppearance.BorderSize = 0;
-            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVer.Image = ((System.Drawing.Image)(resources.GetObject("btnVer.Image")));
-            this.btnVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVer.Location = new System.Drawing.Point(0, 45);
-            this.btnVer.Name = "btnVer";
-            this.btnVer.Size = new System.Drawing.Size(200, 45);
-            this.btnVer.TabIndex = 1;
-            this.btnVer.Text = "Ver";
-            this.btnVer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVer.UseVisualStyleBackColor = false;
-            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(232, 292);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(356, 70);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Bienvenido";
             // 
-            // btnAgregar
+            // pictureBox1
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.White;
-            this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(0, 0);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(200, 45);
-            this.btnAgregar.TabIndex = 4;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(667, 114);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnMenu
+            // label2
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(121)))), ((int)(((byte)(168)))));
-            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.ForeColor = System.Drawing.Color.White;
-            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
-            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 73);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(200, 45);
-            this.btnMenu.TabIndex = 2;
-            this.btnMenu.Text = "Menu";
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(474, 144);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 44);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "PIZZA";
             // 
-            // panelLogo
+            // label1
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(121)))), ((int)(((byte)(168)))));
-            this.panelLogo.Controls.Add(this.btnDesplegar);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(200, 73);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // btnDesplegar
-            // 
-            this.btnDesplegar.FlatAppearance.BorderSize = 0;
-            this.btnDesplegar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDesplegar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesplegar.Image = ((System.Drawing.Image)(resources.GetObject("btnDesplegar.Image")));
-            this.btnDesplegar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDesplegar.Location = new System.Drawing.Point(3, 3);
-            this.btnDesplegar.Name = "btnDesplegar";
-            this.btnDesplegar.Padding = new System.Windows.Forms.Padding(0, 0, 70, 0);
-            this.btnDesplegar.Size = new System.Drawing.Size(50, 44);
-            this.btnDesplegar.TabIndex = 3;
-            this.btnDesplegar.UseVisualStyleBackColor = true;
-            this.btnDesplegar.Click += new System.EventHandler(this.btnDesplegar_Click);
-            // 
-            // panelFormularios
-            // 
-            this.panelFormularios.BackColor = System.Drawing.Color.White;
-            this.panelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormularios.Location = new System.Drawing.Point(200, 44);
-            this.panelFormularios.Name = "panelFormularios";
-            this.panelFormularios.Size = new System.Drawing.Size(948, 508);
-            this.panelFormularios.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(202, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(289, 69);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "ROVERE";
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1148, 552);
-            this.Controls.Add(this.panelFormularios);
-            this.Controls.Add(this.panelBarra);
-            this.Controls.Add(this.panelContenedor);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(206)))), ((int)(((byte)(106)))));
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";
-            this.panelBarra.ResumeLayout(false);
-            this.panelContenedor.ResumeLayout(false);
-            this.panelMedios.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panelPrecios.ResumeLayout(false);
-            this.panelSubMenu.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelBarra;
-        private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.Panel panelMedios;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnUsuario;
-        private System.Windows.Forms.Button btnPedido;
-        private System.Windows.Forms.Button btnColonias;
-        private System.Windows.Forms.Panel panelPrecios;
-        private System.Windows.Forms.Button btnTamaño;
-        private System.Windows.Forms.Button btnCosto;
-        private System.Windows.Forms.Button btnPrecios;
-        private System.Windows.Forms.Panel panelSubMenu;
-        private System.Windows.Forms.Button btnVer;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button btnDesplegar;
-        private System.Windows.Forms.Panel panelFormularios;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem pedidoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem coloniasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preciosToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pizzasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem costosExtrasToolStripMenuItem;
     }
 }

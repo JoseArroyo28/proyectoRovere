@@ -39,7 +39,7 @@ namespace proyectoRovere.Controlador
         }
         public bool modificarPizza(string _especialidad, string caracteristicas, int _idPizza)
         {
-            if (mibd.EjecutarSQL("update especialidadesPizza set especialidad = '" + _especialidad + "', Caracteristicas '" + caracteristicas + "' where idPizza = "+ _idPizza))
+            if (mibd.EjecutarSQL("update especialidadesPizza set especialidad = '" + _especialidad + "', Caracteristicas ='" + caracteristicas + "' where idPizza = "+ _idPizza))
             { 
                 return true;
             }

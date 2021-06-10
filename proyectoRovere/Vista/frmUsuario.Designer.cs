@@ -1,5 +1,4 @@
-﻿
-namespace proyectoRovere.Vista
+﻿namespace proyectoRovere.Vista
 {
     partial class frmUsuario
     {
@@ -29,160 +28,145 @@ namespace proyectoRovere.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.lblContraseña = new System.Windows.Forms.Label();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.lblApellidoP = new System.Windows.Forms.Label();
-            this.txtApellidoP = new System.Windows.Forms.TextBox();
-            this.lblApellidoM = new System.Windows.Forms.Label();
-            this.txtApellidoM = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvVerUsuarios = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAgregar
+            // button1
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(612, 295);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(109, 42);
-            this.btnAgregar.TabIndex = 21;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.button1.Location = new System.Drawing.Point(218, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 27);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblContraseña
+            // textBox1
             // 
-            this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(427, 157);
-            this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(114, 25);
-            this.lblContraseña.TabIndex = 20;
-            this.lblContraseña.Text = "Contraseña";
+            this.textBox1.Location = new System.Drawing.Point(79, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(120, 22);
+            this.textBox1.TabIndex = 2;
             // 
-            // txtContraseña
+            // label1
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(612, 161);
-            this.txtContraseña.Multiline = true;
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(130, 22);
-            this.txtContraseña.TabIndex = 19;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nombre";
             // 
-            // lblApellidoP
+            // dgvVerUsuarios
             // 
-            this.lblApellidoP.AutoSize = true;
-            this.lblApellidoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoP.Location = new System.Drawing.Point(58, 206);
-            this.lblApellidoP.Name = "lblApellidoP";
-            this.lblApellidoP.Size = new System.Drawing.Size(153, 25);
-            this.lblApellidoP.TabIndex = 18;
-            this.lblApellidoP.Text = "Apellido paterno";
+            this.dgvVerUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVerUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column8,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
+            this.dgvVerUsuarios.Location = new System.Drawing.Point(-17, 67);
+            this.dgvVerUsuarios.Name = "dgvVerUsuarios";
+            this.dgvVerUsuarios.RowTemplate.Height = 24;
+            this.dgvVerUsuarios.Size = new System.Drawing.Size(1151, 475);
+            this.dgvVerUsuarios.TabIndex = 4;
+            this.dgvVerUsuarios.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvVerUsuarios_MouseDoubleClick);
             // 
-            // txtApellidoP
+            // Column1
             // 
-            this.txtApellidoP.Location = new System.Drawing.Point(215, 210);
-            this.txtApellidoP.Multiline = true;
-            this.txtApellidoP.Name = "txtApellidoP";
-            this.txtApellidoP.Size = new System.Drawing.Size(130, 22);
-            this.txtApellidoP.TabIndex = 17;
+            this.Column1.DataPropertyName = "IdUsuario";
+            this.Column1.HeaderText = "Id Usuario";
+            this.Column1.Name = "Column1";
             // 
-            // lblApellidoM
+            // Column8
             // 
-            this.lblApellidoM.AutoSize = true;
-            this.lblApellidoM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidoM.Location = new System.Drawing.Point(427, 116);
-            this.lblApellidoM.Name = "lblApellidoM";
-            this.lblApellidoM.Size = new System.Drawing.Size(158, 25);
-            this.lblApellidoM.TabIndex = 16;
-            this.lblApellidoM.Text = "Apellido materno";
+            this.Column8.DataPropertyName = "Usuario";
+            this.Column8.HeaderText = "Usuario";
+            this.Column8.Name = "Column8";
             // 
-            // txtApellidoM
+            // Column2
             // 
-            this.txtApellidoM.Location = new System.Drawing.Point(612, 113);
-            this.txtApellidoM.Multiline = true;
-            this.txtApellidoM.Name = "txtApellidoM";
-            this.txtApellidoM.Size = new System.Drawing.Size(130, 22);
-            this.txtApellidoM.TabIndex = 15;
+            this.Column2.DataPropertyName = "Nombre";
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
             // 
-            // lblNombre
+            // Column3
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(58, 157);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(105, 25);
-            this.lblNombre.TabIndex = 14;
-            this.lblNombre.Text = "Nombre(s)";
+            this.Column3.DataPropertyName = "Apellido_P";
+            this.Column3.HeaderText = "Apellido Paterno";
+            this.Column3.Name = "Column3";
             // 
-            // txtNombre
+            // Column4
             // 
-            this.txtNombre.Location = new System.Drawing.Point(215, 161);
-            this.txtNombre.Multiline = true;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(130, 22);
-            this.txtNombre.TabIndex = 13;
+            this.Column4.DataPropertyName = "Apellido_M";
+            this.Column4.HeaderText = "Apellido Materno";
+            this.Column4.Name = "Column4";
             // 
-            // lblUsuario
+            // Column5
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(58, 116);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(79, 25);
-            this.lblUsuario.TabIndex = 12;
-            this.lblUsuario.Text = "Usuario";
+            this.Column5.DataPropertyName = "tipoRol";
+            this.Column5.HeaderText = "Rol";
+            this.Column5.Name = "Column5";
             // 
-            // txtUsuario
+            // Column6
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(215, 116);
-            this.txtUsuario.Multiline = true;
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(130, 22);
-            this.txtUsuario.TabIndex = 11;
+            this.Column6.DataPropertyName = "contraseña";
+            this.Column6.HeaderText = "Contraseña";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Estado";
+            this.Column7.HeaderText = "Estado";
+            this.Column7.Name = "Column7";
             // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.lblContraseña);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.lblApellidoP);
-            this.Controls.Add(this.txtApellidoP);
-            this.Controls.Add(this.lblApellidoM);
-            this.Controls.Add(this.txtApellidoM);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.txtUsuario);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(206)))), ((int)(((byte)(106)))));
+            this.ClientSize = new System.Drawing.Size(1152, 581);
+            this.Controls.Add(this.dgvVerUsuarios);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
             this.Name = "frmUsuario";
             this.Text = "frmUsuario";
+            this.Load += new System.EventHandler(this.frmUsuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Label lblContraseña;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.Label lblApellidoP;
-        private System.Windows.Forms.TextBox txtApellidoP;
-        private System.Windows.Forms.Label lblApellidoM;
-        private System.Windows.Forms.TextBox txtApellidoM;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvVerUsuarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

@@ -47,14 +47,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\coloniaControlador.cs" />
+    <Compile Include="Controlador\costoExtracontrolador.cs" />
     <Compile Include="Controlador\pizzasControlador.cs" />
     <Compile Include="Controlador\tamañocontrolador.cs" />
     <Compile Include="Controlador\usuarioControlador.cs" />
     <Compile Include="Modelo\conexionBD.cs" />
     <Compile Include="Modelo\databasecon.cs" />
+    <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Modelo\pizzaModelo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\CUDusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CUDusuario.Designer.cs">
+      <DependentUpon>CUDusuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmagregarPizza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +75,18 @@
     <Compile Include="Vista\frmColonia.Designer.cs">
       <DependentUpon>frmColonia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmcostosExtras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmcostosExtras.Designer.cs">
+      <DependentUpon>frmcostosExtras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +98,12 @@
     </Compile>
     <Compile Include="Vista\frmmenuPizzas.Designer.cs">
       <DependentUpon>frmmenuPizzas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmpedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmpedido.Designer.cs">
+      <DependentUpon>frmpedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmTamaños.cs">
       <SubType>Form</SubType>
@@ -100,17 +126,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vista\CUDusuario.resx">
+      <DependentUpon>CUDusuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmagregarPizza.resx">
       <DependentUpon>frmagregarPizza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmColonia.resx">
       <DependentUpon>frmColonia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmcostosExtras.resx">
+      <DependentUpon>frmcostosExtras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmmenuPizzas.resx">
       <DependentUpon>frmmenuPizzas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmpedido.resx">
+      <DependentUpon>frmpedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmTamaños.resx">
       <DependentUpon>frmTamaños.cs</DependentUpon>

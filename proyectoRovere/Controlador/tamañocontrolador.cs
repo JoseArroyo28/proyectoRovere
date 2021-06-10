@@ -31,5 +31,10 @@ namespace proyectoRovere.Controlador
                 return false;
             }
         }
+        public DataTable obtenerPrecio(int _id)
+        {
+            DataTable dt = mibd.LeerRegistrosEnmascarado("  select precio from tamaño where idTamaño =  '" + _id + "'");
+            return dt;
+        }
     }
 }

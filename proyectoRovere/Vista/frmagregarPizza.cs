@@ -14,11 +14,17 @@ namespace proyectoRovere.Vista
     {
         Controlador.pizzasControlador pizzasControlador = new Controlador.pizzasControlador(Modelo.conexionBD.cadconn);
         string id;
+        Controlador.tamañocontrolador tamañocontrolador = new Controlador.tamañocontrolador(Modelo.conexionBD.cadconn);
+        DataTable dt = new DataTable();
         public frmagregarPizza()
         {
+            
             InitializeComponent();
+            dt = tamañocontrolador.obtenerPrecio(1);
+            txtPrecioG.Text = "" + ( Convert.ToInt64(dt.Rows[0]["precio"]));
+            dt = tamañocontrolador.obtenerPrecio(2);
+            txtPrecioM.Text = "" + (Convert.ToInt64(dt.Rows[0]["precio"]));
         }
-
         public frmagregarPizza(Vista.frmmenuPizzas pizzas, Modelo.pizzaModelo pizzaModelo, string _id)
         {
             this.id = _id;
@@ -27,8 +33,12 @@ namespace proyectoRovere.Vista
             btnEliminar.Visible = true;
             txtEspecialidad.Text = pizzaModelo.Especialidad;
             txtCaracteristica.Text = pizzaModelo.caracteristica;
+            dt = tamañocontrolador.obtenerPrecio(1);
+            txtPrecioG.Text = "" + (Convert.ToInt64(dt.Rows[0]["precio"]));
+            dt = tamañocontrolador.obtenerPrecio(2);
+            txtPrecioM.Text = "" + (Convert.ToInt64(dt.Rows[0]["precio"]));
         }
-        private void btnAgregar_Click_1(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (btnAgregar.Text == "Modificar")
             {
@@ -36,7 +46,7 @@ namespace proyectoRovere.Vista
                 {
                     MessageBox.Show("Se Ha Modificado la Pizza ");
                 }
-
+               
             }
             else
             {
@@ -45,15 +55,23 @@ namespace proyectoRovere.Vista
                     MessageBox.Show("Se Ha Agregado nuevo Menu ");
                 }
             }
+           
         }
 
-        private void btnEliminar_Click_1(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            frmMenu frmMenu = new frmMenu();
+            frmMenu.Show();
+
+            this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (pizzasControlador.eliminarPizza(Convert.ToInt32(id)))
             {
                 MessageBox.Show("Se Ha Eliminado  Pizza ");
             }
-
         }
     }
 }
