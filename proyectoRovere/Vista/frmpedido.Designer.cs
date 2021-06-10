@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmpedido));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnmenosAderezo = new System.Windows.Forms.Button();
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtCantAderezo = new System.Windows.Forms.TextBox();
+            this.txtCantsalsa = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnmenosSalsa = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnmasSalsa = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button25 = new System.Windows.Forms.Button();
             this.btnJalapeño = new System.Windows.Forms.Button();
@@ -63,7 +64,7 @@
             this.btnRovere = new System.Windows.Forms.Button();
             this.btnVegetariana = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txttotalVenta = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -75,8 +76,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.txtServDom = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtOrdenAceptada = new System.Windows.Forms.RichTextBox();
+            this.txtOrden = new System.Windows.Forms.RichTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtPrecioT = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -92,7 +93,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gpbDatosTamaño = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnmenosM = new System.Windows.Forms.Button();
             this.btnmasM = new System.Windows.Forms.Button();
@@ -120,11 +121,15 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.chbDom = new System.Windows.Forms.CheckBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnAñadir = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.gpbEspecialidades.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gpbDatosTamaño.SuspendLayout();
             this.chbDomicilio.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.grbDomicilio.SuspendLayout();
@@ -133,15 +138,15 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.button7);
-            this.groupBox4.Controls.Add(this.button8);
+            this.groupBox4.Controls.Add(this.btnmenosAderezo);
+            this.groupBox4.Controls.Add(this.btnEnviar);
             this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.textBox7);
-            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.txtCantAderezo);
+            this.groupBox4.Controls.Add(this.txtCantsalsa);
             this.groupBox4.Controls.Add(this.button9);
-            this.groupBox4.Controls.Add(this.button10);
+            this.groupBox4.Controls.Add(this.btnmenosSalsa);
             this.groupBox4.Controls.Add(this.button11);
-            this.groupBox4.Controls.Add(this.button12);
+            this.groupBox4.Controls.Add(this.btnmasSalsa);
             this.groupBox4.Location = new System.Drawing.Point(860, 217);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(487, 278);
@@ -158,25 +163,27 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Cantidad";
             // 
-            // button7
+            // btnmenosAderezo
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(388, 111);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(48, 36);
-            this.button7.TabIndex = 13;
-            this.button7.Text = "v";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnmenosAderezo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenosAderezo.Location = new System.Drawing.Point(388, 111);
+            this.btnmenosAderezo.Name = "btnmenosAderezo";
+            this.btnmenosAderezo.Size = new System.Drawing.Size(48, 36);
+            this.btnmenosAderezo.TabIndex = 13;
+            this.btnmenosAderezo.Text = "v";
+            this.btnmenosAderezo.UseVisualStyleBackColor = true;
+            this.btnmenosAderezo.Click += new System.EventHandler(this.btnmenosAderezo_Click);
             // 
-            // button8
+            // btnEnviar
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(388, 69);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(48, 36);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "^";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Location = new System.Drawing.Point(388, 69);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(48, 36);
+            this.btnEnviar.TabIndex = 12;
+            this.btnEnviar.Text = "^";
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnmasAderezo_Click);
             // 
             // label10
             // 
@@ -187,25 +194,28 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Cantidad";
             // 
-            // textBox7
+            // txtCantAderezo
             // 
-            this.textBox7.Location = new System.Drawing.Point(278, 153);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(101, 22);
-            this.textBox7.TabIndex = 8;
-            this.textBox7.Text = "0";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCantAderezo.Enabled = false;
+            this.txtCantAderezo.Location = new System.Drawing.Point(278, 153);
+            this.txtCantAderezo.Name = "txtCantAderezo";
+            this.txtCantAderezo.Size = new System.Drawing.Size(101, 22);
+            this.txtCantAderezo.TabIndex = 8;
+            this.txtCantAderezo.Text = "0";
+            this.txtCantAderezo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox8
+            // txtCantsalsa
             // 
-            this.textBox8.Location = new System.Drawing.Point(109, 153);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(101, 22);
-            this.textBox8.TabIndex = 7;
-            this.textBox8.Text = "0";
+            this.txtCantsalsa.Enabled = false;
+            this.txtCantsalsa.Location = new System.Drawing.Point(109, 153);
+            this.txtCantsalsa.Name = "txtCantsalsa";
+            this.txtCantsalsa.Size = new System.Drawing.Size(101, 22);
+            this.txtCantsalsa.TabIndex = 7;
+            this.txtCantsalsa.Text = "0";
             // 
             // button9
             // 
+            this.button9.Enabled = false;
             this.button9.Location = new System.Drawing.Point(278, 69);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(101, 78);
@@ -213,18 +223,20 @@
             this.button9.Text = "Aderezo";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnmenosSalsa
             // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(46, 111);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(48, 36);
-            this.button10.TabIndex = 3;
-            this.button10.Text = "v";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnmenosSalsa.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenosSalsa.Location = new System.Drawing.Point(46, 111);
+            this.btnmenosSalsa.Name = "btnmenosSalsa";
+            this.btnmenosSalsa.Size = new System.Drawing.Size(48, 36);
+            this.btnmenosSalsa.TabIndex = 3;
+            this.btnmenosSalsa.Text = "v";
+            this.btnmenosSalsa.UseVisualStyleBackColor = true;
+            this.btnmenosSalsa.Click += new System.EventHandler(this.btnmenosSalsa_Click);
             // 
             // button11
             // 
+            this.button11.Enabled = false;
             this.button11.Location = new System.Drawing.Point(109, 69);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(101, 78);
@@ -232,15 +244,16 @@
             this.button11.Text = "Salsa";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnmasSalsa
             // 
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(46, 69);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(48, 36);
-            this.button12.TabIndex = 0;
-            this.button12.Text = "^";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnmasSalsa.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmasSalsa.Location = new System.Drawing.Point(46, 69);
+            this.btnmasSalsa.Name = "btnmasSalsa";
+            this.btnmasSalsa.Size = new System.Drawing.Size(48, 36);
+            this.btnmasSalsa.TabIndex = 0;
+            this.btnmasSalsa.Text = "^";
+            this.btnmasSalsa.UseVisualStyleBackColor = true;
+            this.btnmasSalsa.Click += new System.EventHandler(this.btnmasSalsa_Click);
             // 
             // groupBox5
             // 
@@ -262,6 +275,7 @@
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Ingredientes";
+            this.groupBox5.Visible = false;
             // 
             // button25
             // 
@@ -382,9 +396,10 @@
             this.gpbEspecialidades.Controls.Add(this.btnPeperoni);
             this.gpbEspecialidades.Controls.Add(this.btnRovere);
             this.gpbEspecialidades.Controls.Add(this.btnVegetariana);
+            this.gpbEspecialidades.Enabled = false;
             this.gpbEspecialidades.Location = new System.Drawing.Point(311, 217);
             this.gpbEspecialidades.Name = "gpbEspecialidades";
-            this.gpbEspecialidades.Size = new System.Drawing.Size(543, 278);
+            this.gpbEspecialidades.Size = new System.Drawing.Size(479, 278);
             this.gpbEspecialidades.TabIndex = 8;
             this.gpbEspecialidades.TabStop = false;
             this.gpbEspecialidades.Text = "Especialidades";
@@ -396,10 +411,11 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 10;
+            this.comboBox1.Visible = false;
             // 
             // btnMexicana
             // 
-            this.btnMexicana.Location = new System.Drawing.Point(154, 36);
+            this.btnMexicana.Location = new System.Drawing.Point(129, 36);
             this.btnMexicana.Name = "btnMexicana";
             this.btnMexicana.Size = new System.Drawing.Size(98, 69);
             this.btnMexicana.TabIndex = 9;
@@ -409,7 +425,7 @@
             // 
             // btnItaliana
             // 
-            this.btnItaliana.Location = new System.Drawing.Point(154, 125);
+            this.btnItaliana.Location = new System.Drawing.Point(129, 125);
             this.btnItaliana.Name = "btnItaliana";
             this.btnItaliana.Size = new System.Drawing.Size(98, 69);
             this.btnItaliana.TabIndex = 8;
@@ -429,7 +445,7 @@
             // 
             // btnAmericana
             // 
-            this.btnAmericana.Location = new System.Drawing.Point(435, 36);
+            this.btnAmericana.Location = new System.Drawing.Point(360, 36);
             this.btnAmericana.Name = "btnAmericana";
             this.btnAmericana.Size = new System.Drawing.Size(98, 69);
             this.btnAmericana.TabIndex = 6;
@@ -439,7 +455,7 @@
             // 
             // btncarneFrias
             // 
-            this.btncarneFrias.Location = new System.Drawing.Point(293, 36);
+            this.btncarneFrias.Location = new System.Drawing.Point(242, 36);
             this.btncarneFrias.Name = "btncarneFrias";
             this.btncarneFrias.Size = new System.Drawing.Size(98, 69);
             this.btncarneFrias.TabIndex = 5;
@@ -449,11 +465,11 @@
             // 
             // btnPeperoni
             // 
-            this.btnPeperoni.Location = new System.Drawing.Point(293, 125);
+            this.btnPeperoni.Location = new System.Drawing.Point(242, 125);
             this.btnPeperoni.Name = "btnPeperoni";
             this.btnPeperoni.Size = new System.Drawing.Size(98, 69);
             this.btnPeperoni.TabIndex = 4;
-            this.btnPeperoni.Text = "Peperoni";
+            this.btnPeperoni.Text = "pepperoni";
             this.btnPeperoni.UseVisualStyleBackColor = true;
             this.btnPeperoni.Click += new System.EventHandler(this.btnPeperoni_Click);
             // 
@@ -469,7 +485,7 @@
             // 
             // btnVegetariana
             // 
-            this.btnVegetariana.Location = new System.Drawing.Point(435, 125);
+            this.btnVegetariana.Location = new System.Drawing.Point(360, 125);
             this.btnVegetariana.Name = "btnVegetariana";
             this.btnVegetariana.Size = new System.Drawing.Size(98, 69);
             this.btnVegetariana.TabIndex = 2;
@@ -479,7 +495,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox18);
+            this.groupBox1.Controls.Add(this.txttotalVenta);
             this.groupBox1.Controls.Add(this.textBox17);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label22);
@@ -491,8 +507,8 @@
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.txtServDom);
             this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.richTextBox2);
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.txtOrdenAceptada);
+            this.groupBox1.Controls.Add(this.txtOrden);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.txtPrecioT);
             this.groupBox1.Controls.Add(this.label16);
@@ -516,12 +532,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ticket";
             // 
-            // textBox18
+            // txttotalVenta
             // 
-            this.textBox18.Location = new System.Drawing.Point(203, 710);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(84, 22);
-            this.textBox18.TabIndex = 27;
+            this.txttotalVenta.Location = new System.Drawing.Point(203, 710);
+            this.txttotalVenta.Name = "txttotalVenta";
+            this.txttotalVenta.Size = new System.Drawing.Size(84, 22);
+            this.txttotalVenta.TabIndex = 27;
+            this.txttotalVenta.Text = "0";
             // 
             // textBox17
             // 
@@ -554,6 +571,7 @@
             this.txtSalsaEx.Name = "txtSalsaEx";
             this.txtSalsaEx.Size = new System.Drawing.Size(84, 22);
             this.txtSalsaEx.TabIndex = 23;
+            this.txtSalsaEx.Text = "0";
             // 
             // label21
             // 
@@ -570,6 +588,7 @@
             this.txtAderezoEx.Name = "txtAderezoEx";
             this.txtAderezoEx.Size = new System.Drawing.Size(84, 22);
             this.txtAderezoEx.TabIndex = 21;
+            this.txtAderezoEx.Text = "0";
             // 
             // label20
             // 
@@ -586,6 +605,7 @@
             this.txtPagoTar.Name = "txtPagoTar";
             this.txtPagoTar.Size = new System.Drawing.Size(84, 22);
             this.txtPagoTar.TabIndex = 19;
+            this.txtPagoTar.Text = "0";
             // 
             // label19
             // 
@@ -602,6 +622,7 @@
             this.txtServDom.Name = "txtServDom";
             this.txtServDom.Size = new System.Drawing.Size(84, 22);
             this.txtServDom.TabIndex = 17;
+            this.txtServDom.Text = "0";
             // 
             // label18
             // 
@@ -612,21 +633,21 @@
             this.label18.TabIndex = 16;
             this.label18.Text = "Servicio a domicilio";
             // 
-            // richTextBox2
+            // txtOrdenAceptada
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(6, 386);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(281, 116);
-            this.richTextBox2.TabIndex = 15;
-            this.richTextBox2.Text = "";
+            this.txtOrdenAceptada.Location = new System.Drawing.Point(6, 386);
+            this.txtOrdenAceptada.Name = "txtOrdenAceptada";
+            this.txtOrdenAceptada.Size = new System.Drawing.Size(281, 116);
+            this.txtOrdenAceptada.TabIndex = 15;
+            this.txtOrdenAceptada.Text = "";
             // 
-            // richTextBox1
+            // txtOrden
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(6, 264);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(281, 116);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.txtOrden.Location = new System.Drawing.Point(6, 264);
+            this.txtOrden.Name = "txtOrden";
+            this.txtOrden.Size = new System.Drawing.Size(281, 116);
+            this.txtOrden.TabIndex = 11;
+            this.txtOrden.Text = "";
             // 
             // label17
             // 
@@ -750,25 +771,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
-            // groupBox3
+            // gpbDatosTamaño
             // 
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.btnmenosM);
-            this.groupBox3.Controls.Add(this.btnmasM);
-            this.groupBox3.Controls.Add(this.chbMitad);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.txtCantM);
-            this.groupBox3.Controls.Add(this.txtCantG);
-            this.groupBox3.Controls.Add(this.btnMega);
-            this.groupBox3.Controls.Add(this.btnmenosG);
-            this.groupBox3.Controls.Add(this.btnGrande);
-            this.groupBox3.Controls.Add(this.btnmasG);
-            this.groupBox3.Location = new System.Drawing.Point(857, 12);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(495, 199);
-            this.groupBox3.TabIndex = 12;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos del Pedido";
+            this.gpbDatosTamaño.Controls.Add(this.label7);
+            this.gpbDatosTamaño.Controls.Add(this.btnmenosM);
+            this.gpbDatosTamaño.Controls.Add(this.btnmasM);
+            this.gpbDatosTamaño.Controls.Add(this.chbMitad);
+            this.gpbDatosTamaño.Controls.Add(this.label9);
+            this.gpbDatosTamaño.Controls.Add(this.txtCantM);
+            this.gpbDatosTamaño.Controls.Add(this.txtCantG);
+            this.gpbDatosTamaño.Controls.Add(this.btnMega);
+            this.gpbDatosTamaño.Controls.Add(this.btnmenosG);
+            this.gpbDatosTamaño.Controls.Add(this.btnGrande);
+            this.gpbDatosTamaño.Controls.Add(this.btnmasG);
+            this.gpbDatosTamaño.Location = new System.Drawing.Point(857, 12);
+            this.gpbDatosTamaño.Name = "gpbDatosTamaño";
+            this.gpbDatosTamaño.Size = new System.Drawing.Size(495, 199);
+            this.gpbDatosTamaño.TabIndex = 12;
+            this.gpbDatosTamaño.TabStop = false;
+            this.gpbDatosTamaño.Text = "Datos del Pedido";
             // 
             // label7
             // 
@@ -830,7 +851,7 @@
             this.txtCantM.Name = "txtCantM";
             this.txtCantM.Size = new System.Drawing.Size(101, 22);
             this.txtCantM.TabIndex = 8;
-            this.txtCantM.Text = "1";
+            this.txtCantM.Text = "0";
             this.txtCantM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtCantG
@@ -840,7 +861,7 @@
             this.txtCantG.Name = "txtCantG";
             this.txtCantG.Size = new System.Drawing.Size(101, 22);
             this.txtCantG.TabIndex = 7;
-            this.txtCantG.Text = "1";
+            this.txtCantG.Text = "0";
             // 
             // btnMega
             // 
@@ -1046,12 +1067,59 @@
             this.chbDom.UseVisualStyleBackColor = true;
             this.chbDom.CheckedChanged += new System.EventHandler(this.chbDom_CheckedChanged);
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.Location = new System.Drawing.Point(797, 272);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(54, 45);
+            this.btnAgregar.TabIndex = 12;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Visible = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.Location = new System.Drawing.Point(796, 351);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(54, 41);
+            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(1188, 635);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(89, 41);
+            this.btnCerrar.TabIndex = 14;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnAñadir
+            // 
+            this.btnAñadir.Location = new System.Drawing.Point(1188, 547);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(89, 41);
+            this.btnAñadir.TabIndex = 15;
+            this.btnAñadir.Text = "Enviar";
+            this.btnAñadir.UseVisualStyleBackColor = true;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
+            // 
             // frmpedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(206)))), ((int)(((byte)(106)))));
             this.ClientSize = new System.Drawing.Size(1385, 830);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.btnAñadir);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.gpbDatosTamaño);
             this.Controls.Add(this.chbDomicilio);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox5);
@@ -1067,8 +1135,8 @@
             this.gpbEspecialidades.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gpbDatosTamaño.ResumeLayout(false);
+            this.gpbDatosTamaño.PerformLayout();
             this.chbDomicilio.ResumeLayout(false);
             this.chbDomicilio.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1083,15 +1151,15 @@
 
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnmenosAderezo;
+        private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtCantAderezo;
+        private System.Windows.Forms.TextBox txtCantsalsa;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnmenosSalsa;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnmasSalsa;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button btnJalapeño;
@@ -1116,7 +1184,7 @@
         private System.Windows.Forms.Button btnRovere;
         private System.Windows.Forms.Button btnVegetariana;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txttotalVenta;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
@@ -1128,8 +1196,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtServDom;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtOrdenAceptada;
+        private System.Windows.Forms.RichTextBox txtOrden;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtPrecioT;
         private System.Windows.Forms.Label label16;
@@ -1145,7 +1213,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombreT;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gpbDatosTamaño;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnmenosM;
         private System.Windows.Forms.Button btnmasM;
@@ -1173,5 +1241,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.CheckBox chbDom;
         private System.Windows.Forms.MaskedTextBox txtTelefono;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnAñadir;
     }
 }

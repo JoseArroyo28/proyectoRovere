@@ -60,5 +60,10 @@ namespace proyectoRovere.Controlador
                 return false;
             }
         }
+        public DataTable obtenerDescripcion(string _nombrePizza)
+        {
+            DataTable dt = mibd.LeerRegistrosEnmascarado("   SELECT IdPizza, Caracteristicas FROM especialidadesPizza where especialidad = '" + _nombrePizza + "'");
+            return dt;
+        }
     }
 }

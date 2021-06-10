@@ -16,7 +16,7 @@ namespace proyectoRovere
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vista.frmMenu());
+            Application.Run(new Vista.frmLogin());
         }
     }
 }

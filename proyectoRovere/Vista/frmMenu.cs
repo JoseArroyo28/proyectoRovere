@@ -78,6 +78,18 @@ namespace proyectoRovere.Vista
 
         private void pedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void verToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Vista.frmVerpedidos frmVerpedidos = new frmVerpedidos();
+            frmVerpedidos.Show();
+            this.Hide();
+        }
+
+        private void agregarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
             frmpedido frmpedido = new frmpedido();
             frmpedido.Show();
             this.Hide();

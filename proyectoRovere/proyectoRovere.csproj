@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\coloniaControlador.cs" />
+    <Compile Include="Controlador\controladorPedido.cs" />
     <Compile Include="Controlador\costoExtracontrolador.cs" />
     <Compile Include="Controlador\pizzasControlador.cs" />
     <Compile Include="Controlador\tamañocontrolador.cs" />
@@ -117,6 +118,12 @@
     <Compile Include="Vista\frmUsuario.Designer.cs">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmVerpedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmVerpedidos.Designer.cs">
+      <DependentUpon>frmVerpedidos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -155,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmVerpedidos.resx">
+      <DependentUpon>frmVerpedidos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
