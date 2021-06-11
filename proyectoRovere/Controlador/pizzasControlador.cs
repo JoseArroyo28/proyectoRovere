@@ -16,10 +16,14 @@ namespace proyectoRovere.Controlador
         {
             mibd = new BDMSSQL(_conn);
         }
+        int a = 0;
         public DataTable verPizzas()
         {
             DataTable dt = mibd.LeerRegistrosEnmascarado(" select idPizza, especialidad, Caracteristicas, T.tipoTamaño, T.precio from   tamaño as T inner join especialidadesPizza as P  on P.idTamaño like T.idTamaño where Estado = 1");
+            
+            
             return dt;
+            
         }
         public DataTable obteneridPizza()
         {
