@@ -60,10 +60,23 @@ namespace proyectoRovere.Controlador
                 return false;
             }
         }
-        public DataTable obtenerDescripcion(string _nombrePizza)
+       public string obtenerID(string _nombrePizza, string _tamaño)
         {
-            DataTable dt = mibd.LeerRegistrosEnmascarado("   SELECT IdPizza, Caracteristicas FROM especialidadesPizza where especialidad = '" + _nombrePizza + "'");
-            return dt;
+            DataTable dt = mibd.LeerRegistrosEnmascarado("SELECT IdPizza, Caracteristicas FROM especialidadesPizza as EP, Tamaño as T where  T.idTamaño = EP.idTamaño and especialidad = '" + _nombrePizza + "'  and T.tipoTamaño = '"+ _tamaño+"'");
+            if (dt == null)
+            {
+                return "Error";
+            }
+            return "" + dt.Rows[0]["IdPizza"];
+        }
+        public string obtenerDescripcion(string _nombrePizza)
+        {
+            DataTable dt = mibd.LeerRegistrosEnmascarado("SELECT IdPizza, Caracteristicas FROM especialidadesPizza where especialidad = '" + _nombrePizza + "'");
+            if (dt == null)
+            {
+                return "Error";
+            }
+            return "" + dt.Rows[0]["Caracteristicas"];
         }
     }
 }

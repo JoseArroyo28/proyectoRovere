@@ -10,6 +10,7 @@ namespace proyectoRovere.Controlador
 {
     public class tamañocontrolador
     {
+        pizzasControlador pizzas = new pizzasControlador(Modelo.conexionBD.cadconn);
         private BDMSSQL mibd;
         public tamañocontrolador(string _conn)
         {
@@ -31,10 +32,31 @@ namespace proyectoRovere.Controlador
                 return false;
             }
         }
-        public DataTable obtenerPrecio(int _id)
+        /*public DataTable obtenerPrecio(int _id)
         {
             DataTable dt = mibd.LeerRegistrosEnmascarado("  select precio from tamaño where idTamaño =  '" + _id + "'");
             return dt;
+        }*/
+        /* public string obteneridTamaño(string _especialidad, double _precio)
+         {
+             DataTable dataTable = new DataTable();
+             dataTable = pizzas.obteneridPizza();
+             return "" +
+         }*/
+        public string obteneridtamaño (string _tipoTamaño)
+        {
+            DataTable dt = mibd.LeerRegistrosEnmascarado("select idTamaño,precio from tamaño where tipoTamaño = '" + _tipoTamaño + "'");
+            
+                return "" + Convert.ToInt64(dt.Rows[0]["idTamaño"]);
+            
+
+        }
+        public string  obtenerprecio(string _tipoTamaño)
+        {
+            DataTable dt = mibd.LeerRegistrosEnmascarado("select idTamaño,precio from tamaño where tipoTamaño = '" + _tipoTamaño + "'");
+           
+                return "" + Convert.ToInt64(dt.Rows[0]["precio"]);
+           
         }
     }
 }

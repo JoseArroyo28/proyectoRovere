@@ -205,6 +205,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmagregarPizza";
             this.Text = "frmagregarPizza";
+            this.Load += new System.EventHandler(this.frmagregarPizza_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
