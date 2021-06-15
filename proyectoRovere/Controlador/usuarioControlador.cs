@@ -6,6 +6,7 @@ using BD_Comm_MySQL;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Data;
+using proyectoRovere.Modelo;
 
 namespace proyectoRovere.Controlador
 {
@@ -58,9 +59,13 @@ namespace proyectoRovere.Controlador
                 return false;
             }
         }
+
+        string estado;
+        Usuario Usuario = new Usuario();
         public DataTable leerUsuario()
         {
-            DataTable dt = mibd.LeerRegistrosEnmascarado("SELECT IdUsuario,Usuario,Nombre,Apellido_P,Apellido_M,contraseña,Estado, R.tipoRol FROM Usuario as U, Roles as R where U.idRol = R.idRol and Estado = 1");
+            DataTable dt = mibd.LeerRegistrosEnmascarado("SELECT IdUsuario,Usuario,Nombre,Apellido_P,Apellido_M,contraseña,Estado, R.tipoRol FROM Usuario as U, Roles as R where U.idRol = R.idRol and Estado==1");
+            estado = Usuario.Estado == 1 ? "Activo" : "Desactivado";
             return dt;
         }
         public bool eliminarUsuario(int _idUsuario)
