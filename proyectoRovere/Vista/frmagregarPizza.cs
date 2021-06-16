@@ -20,10 +20,6 @@ namespace proyectoRovere.Vista
         {
             
             InitializeComponent();
-            dt = tamañocontrolador.obtenerPrecio(1);
-            txtPrecioG.Text = "" + ( Convert.ToInt64(dt.Rows[0]["precio"]));
-            dt = tamañocontrolador.obtenerPrecio(2);
-            txtPrecioM.Text = "" + (Convert.ToInt64(dt.Rows[0]["precio"]));
         }
         public frmagregarPizza(Vista.frmmenuPizzas pizzas, Modelo.pizzaModelo pizzaModelo, string _id)
         {
@@ -33,10 +29,8 @@ namespace proyectoRovere.Vista
             btnEliminar.Visible = true;
             txtEspecialidad.Text = pizzaModelo.Especialidad;
             txtCaracteristica.Text = pizzaModelo.caracteristica;
-            dt = tamañocontrolador.obtenerPrecio(1);
-            txtPrecioG.Text = "" + (Convert.ToInt64(dt.Rows[0]["precio"]));
-            dt = tamañocontrolador.obtenerPrecio(2);
-            txtPrecioM.Text = "" + (Convert.ToInt64(dt.Rows[0]["precio"]));
+            
+            
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -72,6 +66,12 @@ namespace proyectoRovere.Vista
             {
                 MessageBox.Show("Se Ha Eliminado  Pizza ");
             }
+        }
+
+        private void frmagregarPizza_Load(object sender, EventArgs e)
+        {
+            txtPrecioG.Text = tamañocontrolador.obtenerprecio("Grande");
+            txtPrecioM.Text = tamañocontrolador.obtenerprecio("Mega");
         }
     }
 }

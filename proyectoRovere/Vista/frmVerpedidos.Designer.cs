@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.dgvverPedidos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvverPedidos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -37,12 +43,59 @@
             this.dgvverPedidos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.dgvverPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvverPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD
             this.dgvverPedidos.Location = new System.Drawing.Point(286, 191);
+=======
+            this.dgvverPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dgvverPedidos.Location = new System.Drawing.Point(12, 38);
+>>>>>>> 05a9e7370981229f8767fb98c22ba2785723026d
             this.dgvverPedidos.Name = "dgvverPedidos";
             this.dgvverPedidos.RowHeadersWidth = 51;
             this.dgvverPedidos.RowTemplate.Height = 24;
             this.dgvverPedidos.Size = new System.Drawing.Size(889, 275);
             this.dgvverPedidos.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Numero_Pedido";
+            this.Column1.HeaderText = "# Pedido";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "especialidad";
+            this.Column2.HeaderText = "Especialidad";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Caracteristicas";
+            this.Column3.HeaderText = "Ingredientes";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "tipoTamaño";
+            this.Column4.HeaderText = "Tamaño";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "nombreCliente";
+            this.Column5.HeaderText = "Cliente";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Estado";
+            this.Column6.HeaderText = "Estado";
+            this.Column6.Name = "Column6";
             // 
             // frmVerpedidos
             // 
@@ -61,5 +114,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvverPedidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

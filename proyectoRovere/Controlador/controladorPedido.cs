@@ -18,7 +18,11 @@ namespace proyectoRovere.Controlador
         }
         public DataTable verPedidos()
         {
+<<<<<<< HEAD
             DataTable dt = mibd.LeerRegistrosEnmascarado("select especialidad as Especialidad, Caracteristicas,T.tipoTamaño as Tamaño, P.idPedido as Numero_Pedido,nombreCliente as Cliente, E.EstadoActual as Estado from especialidadesPizza as EP,Estado as E,tamaño as T, detalle_pedido as DP, pedido as P where EP.idPizza = Dp.idPizza and Dp.idPedido = P.idPedido and P.idEstado = E.idEstado and EP.idTamaño = T.idTamaño");
+=======
+            DataTable dt = mibd.LeerRegistrosEnmascarado("select especialidad, Caracteristicas,T.tipoTamaño, P.idPedido as Numero_Pedido,nombreCliente, E.Estado from especialidadesPizza as EP,Estado as E,tamaño as T, detalle_pedido as DP, pedido as P where EP.idPizza = Dp.idPizza and Dp.idPedido = P.idPedido and P.idEstado = E.idEstado and EP.idTamaño = T.idTamaño");
+>>>>>>> 05a9e7370981229f8767fb98c22ba2785723026d
             return dt;
         }
         public bool insertarPedido(string _nombre, DateTime _fecha, double _costoTotal, string _domicilio, int _idColonia)
@@ -48,6 +52,7 @@ namespace proyectoRovere.Controlador
                 return false;
             }
         }
+        
 
 
     }

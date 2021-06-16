@@ -58,10 +58,10 @@ namespace proyectoRovere.Controlador
             DataTable dt = mibd.LeerRegistrosEnmascarado("select IdcostoExtra from tamaño where nombreCosto =  '" + _nombreCostoExtra + "'");
             return dt;
         }
-        public DataTable obtenerCosto(int _id)
+        public string obtenerCosto( string _nombreCosto)
         {
-            DataTable dt = mibd.LeerRegistrosEnmascarado("  select costoCantidad from costoExtra where IdcostoExtra =  " + _id + "");
-            return dt;
+            DataTable dt = mibd.LeerRegistrosEnmascarado("  select costoCantidad from costoExtra where nombreCosto = '" +_nombreCosto+"'");
+            return "" + Convert.ToInt64(dt.Rows[0]["costoCantidad"]); ;
         }
     }
 }
