@@ -32,10 +32,10 @@ namespace proyectoRovere.Vista
            pizzaM.Especialidad = dgvverPizzas.CurrentRow.Cells[1].Value.ToString();
             pizzaM.caracteristica = dgvverPizzas.CurrentRow.Cells[2].Value.ToString();
            
-            this.Hide();
+
             Vista.frmagregarPizza frmagregarPizza = new Vista.frmagregarPizza( this,pizzaM, pizzaM.idPizza.ToString());
             frmagregarPizza.Show();
-            this.Hide();
+
         }
 
         private void dgvverPizzas_CellContentClick(object sender, DataGridViewCellEventArgs e)

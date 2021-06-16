@@ -34,18 +34,22 @@
             // 
             // dgvverPedidos
             // 
+            this.dgvverPedidos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dgvverPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvverPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvverPedidos.Location = new System.Drawing.Point(12, 38);
+            this.dgvverPedidos.Location = new System.Drawing.Point(286, 191);
             this.dgvverPedidos.Name = "dgvverPedidos";
+            this.dgvverPedidos.RowHeadersWidth = 51;
             this.dgvverPedidos.RowTemplate.Height = 24;
-            this.dgvverPedidos.Size = new System.Drawing.Size(1463, 564);
+            this.dgvverPedidos.Size = new System.Drawing.Size(889, 275);
             this.dgvverPedidos.TabIndex = 0;
             // 
             // frmVerpedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1487, 614);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.ClientSize = new System.Drawing.Size(1372, 616);
             this.Controls.Add(this.dgvverPedidos);
             this.Name = "frmVerpedidos";
             this.Text = "frmVerpedidos";

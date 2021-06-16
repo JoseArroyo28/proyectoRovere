@@ -24,7 +24,6 @@ namespace proyectoRovere.Vista
         public frmpedido()
         {
             InitializeComponent();
-            txtFecha.Text= DateTime.Now.ToString("dd/MM/yyyy");
             dt = tamañocontrolador.obtenerPrecio(1);
             precioGrande = "" + Convert.ToInt64(dt.Rows[0]["precio"]);
             dt = tamañocontrolador.obtenerPrecio(2);
@@ -64,12 +63,12 @@ namespace proyectoRovere.Vista
             txtCantidadT.Text = txtCantG.Text;
             if (btnmenosM.Enabled == true && btnmasM.Enabled == true)
             {
-                btnmenosM.Enabled = false;
-                btnmasM.Enabled = false;
+                btnmenosM.Visible = false;
+                btnmasM.Visible = false;
                 txtCantM.Text = "1";
             }
-            btnmasG.Enabled = true;
-            btnmenosG.Enabled = true;
+            btnmasG.Visible = true;
+            btnmenosG.Visible = true;
             txtTamañoT.Text = "Grande";
             txtPrecioT.Text = "" + int.Parse(precioGrande) * int.Parse(txtCantG.Text);
             txtCantM.Text = "0";
@@ -218,7 +217,7 @@ namespace proyectoRovere.Vista
            
             if (contadorespecialidades == 1 && chbMitad.Checked == false)
             {
-                txtOrden.Text = "" + dt.Rows[0]["Caracteristicas"];
+                    txtOrden.Text = "" + dt.Rows[0]["Caracteristicas"];
                 gpbEspecialidades.Enabled = false;
                 btnAgregar.Visible = true;
             }
@@ -321,12 +320,12 @@ namespace proyectoRovere.Vista
             txtCantidadT.Text = txtCantM.Text;
             if (btnmasG.Enabled == true && btnmenosG.Enabled == true)
             {
-                btnmasG.Enabled = false;
-                btnmenosG.Enabled = false;
+                btnmasG.Visible = false;
+                btnmenosG.Visible = false;
                 txtCantG.Text = "1";
             }
-            btnmenosM.Enabled = true;
-            btnmasM.Enabled = true;
+            btnmenosM.Visible = true;
+            btnmasM.Visible = true;
             txtTamañoT.Text = btnMega.Text;
             txtPrecioT.Text = "" + int.Parse(precioMega) * int.Parse(txtCantM.Text);
             txtCantG.Text = "0";
@@ -367,6 +366,8 @@ namespace proyectoRovere.Vista
             txtPrecioT.Text = "";
             txtCantG.Text = "0";
             txtCantM.Text = "0";
+
+            txtPrecioT.Text = "0";
             btnCancelar.Visible = true;
             totalids++;
         }
@@ -374,7 +375,7 @@ namespace proyectoRovere.Vista
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             string idPedido;
-            if (pedido.insertarPedido(txtNombreT.Text,txtFecha.Text,int.Parse(txttotalVenta.Text),txtDomicilioT.Text, Convert.ToInt32(cmbColonia.SelectedValue)))
+            if (pedido.insertarPedido(txtNombreT.Text,DateTime.Now,int.Parse(txttotalVenta.Text),txtDomicilioT.Text, Convert.ToInt32(cmbColonia.SelectedValue)))
             {
                 int i = 0;
                 dt = pedido.ultimaIdVenta();
@@ -387,7 +388,11 @@ namespace proyectoRovere.Vista
                     }
                     i++;
                 }
-               
+                MessageBox.Show("Pedido añadido con extio!");
+                txtOrdenAceptada.Text = "";
+                txttotalVenta.Text = "0";
+                pedido.verPedidos();
+
             } 
         }
 

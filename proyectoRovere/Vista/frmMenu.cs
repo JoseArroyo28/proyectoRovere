@@ -19,16 +19,13 @@ namespace proyectoRovere.Vista
         
         private void verToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Vista.frmmenuPizzas frmmenuPizzas = new frmmenuPizzas();
-            frmmenuPizzas.Show();
-            this.Hide();
+
+            AbrirFormulario<frmmenuPizzas>();
         }
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Vista.frmagregarPizza frmagregarPizza = new frmagregarPizza();
-            frmagregarPizza.Show();
-            this.Hide();
+            AbrirFormulario<frmagregarPizza>();
         }
 
         private void preciosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,9 +35,7 @@ namespace proyectoRovere.Vista
 
         private void coloniasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmColonia frmColonia = new frmColonia();
-            frmColonia.Show();
-            this.Hide();
+            AbrirFormulario<frmColonia>();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,30 +45,22 @@ namespace proyectoRovere.Vista
 
         private void verToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmUsuario frmUsuario = new frmUsuario();
-            frmUsuario.Show();
-            this.Hide();
+            AbrirFormulario<frmUsuario>();
         }
 
         private void agregarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            CUDusuario cUDusuario = new CUDusuario();
-            cUDusuario.Show();
-            this.Hide();
+            AbrirFormulario<CUDusuario>();
         }
 
         private void pizzasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Vista.frmTamaños tamaños = new frmTamaños();
-            tamaños.Show();
-            this.Hide();
+            AbrirFormulario<frmTamaños>();
         }
 
         private void costosExtrasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Vista.frmcostosExtras frmcostosExtras = new frmcostosExtras();
-            frmcostosExtras.Show();
-            this.Hide();
+            AbrirFormulario<frmcostosExtras>();
         }
 
         private void pedidoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -83,16 +70,43 @@ namespace proyectoRovere.Vista
 
         private void verToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            Vista.frmVerpedidos frmVerpedidos = new frmVerpedidos();
-            frmVerpedidos.Show();
-            this.Hide();
+           
+            AbrirFormulario<frmVerpedidos>();
         }
 
         private void agregarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmpedido frmpedido = new frmpedido();
-            frmpedido.Show();
-            this.Hide();
+         
+            AbrirFormulario<frmpedido>();
+        }
+        public void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = panelFormularios.Controls.OfType<MiForm>().FirstOrDefault();
+                                                                                     
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                panelFormularios.Controls.Add(formulario);
+                panelFormularios.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+
+            else
+            {
+                formulario.BringToFront();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin log = new frmLogin();
+            log.Show();
         }
     }
 }

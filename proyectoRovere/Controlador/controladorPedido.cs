@@ -18,12 +18,12 @@ namespace proyectoRovere.Controlador
         }
         public DataTable verPedidos()
         {
-            DataTable dt = mibd.LeerRegistrosEnmascarado("  select * from especialidadesPizza as EP, detalle_pedido as DP, pedido as P where EP.idPizza = Dp.idPizza and Dp.idPedido = P.idPedido");
+            DataTable dt = mibd.LeerRegistrosEnmascarado("select especialidad as Especialidad, Caracteristicas,T.tipoTamaño as Tamaño, P.idPedido as Numero_Pedido,nombreCliente as Cliente, E.EstadoActual as Estado from especialidadesPizza as EP,Estado as E,tamaño as T, detalle_pedido as DP, pedido as P where EP.idPizza = Dp.idPizza and Dp.idPedido = P.idPedido and P.idEstado = E.idEstado and EP.idTamaño = T.idTamaño");
             return dt;
         }
-        public bool insertarPedido(string _nombre,string _fecha ,double _costoTotal,string _domicilio, int _idColonia)
+        public bool insertarPedido(string _nombre, DateTime _fecha, double _costoTotal, string _domicilio, int _idColonia)
         {
-            if (mibd.EjecutarSQL("INSERT INTO pedido VALUES ('"+ _nombre+ "', '"+ _fecha + "', "+0+ ", "+ _costoTotal + ", '"+ _domicilio + "' ," +1+","+1+","+ _idColonia + ")"))
+            if (mibd.EjecutarSQL("INSERT INTO pedido VALUES ('" + _nombre + "', '" + _fecha + "', " + 0 + ", " + _costoTotal + ", '" + _domicilio + "' ," + 1 + "," + 1 + "," + _idColonia + ")"))
             {
                 return true;
             }
@@ -39,7 +39,7 @@ namespace proyectoRovere.Controlador
         }
         public bool insertarDetallePedido(int _idPedido, int _idPizza, int _precio)
         {
-            if (mibd.EjecutarSQL("INSERT INTO detalle_pedido VALUES ("+ _idPedido + "," + _idPizza + "," + _precio + ")"))
+            if (mibd.EjecutarSQL("INSERT INTO detalle_pedido VALUES (" + _idPedido + "," + _idPizza + "," + _precio + ")"))
             {
                 return true;
             }
@@ -49,5 +49,7 @@ namespace proyectoRovere.Controlador
             }
         }
 
+
     }
 }
+
